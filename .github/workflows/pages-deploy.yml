@@ -46,7 +46,7 @@ jobs:
           path: dist/portfolio
           artifact-name: sample_portfolio_build
 
-      # Step 7: Deploy to GitHub Pages
+      # Step 7: Deploy to GitHub Pagess
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
