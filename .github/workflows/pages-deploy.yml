@@ -15,6 +15,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages   # <-- This is required for deployment
+
     steps:
       # Step 1: Checkout repository
       - name: Checkout
@@ -44,11 +47,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/portfolio
-          artifact-name: sample_portfolio_build
+          artifact_name: sample_portfolio_build  # <-- correct syntax
 
       # Step 7: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact-name: sample_portfolio_build
+          artifact_name: sample_portfolio_build
