@@ -31,13 +31,13 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --base-href=/sample_portfolio/
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/sample_portfolio/browser
+          path: dist/portfolio   
 
       - name: Deploy to GitHub Pages
         id: deployment
